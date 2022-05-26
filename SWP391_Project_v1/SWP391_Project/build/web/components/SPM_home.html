@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>LGS - Admin</title>
+
+    <!-- Custom fonts for this template -->
+    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../assets/styles/sb-admin-2.min.css" rel="stylesheet">
+    <link href="../assets/styles/slider_status.css" rel="stylesheet">
+    <link href="../assets/styles/icon_action.css" rel="stylesheet">
+    <!-- Custom styles for this page -->
+    <link href="../vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="../assets/styles/custom_box.css" rel="stylesheet">
+    <link href="../css/fnon.min.css" rel="stylesheet">
+    <link href="../assets/styles/alert.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <!-- <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <div include-html="../components/sidebar.html" id="sidebar" style="display: contents;"></div>
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+        </ul> -->
+        <!-- End of Sidebar -->
+        <!-- Content Wrapper -->
+        <div id="content-wrapper">
+            <!-- Main Content -->
+            <div id="content">
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <!-- Topbar Navbar -->
+                    <div include-html="../components/topnavbar.html" id="topnavbar" class="ml-auto"></div>
+                </nav>
+                <!-- End of Topbar -->
+                <h1 class="h3 mb-0 text-gray-800" style="text-align: center;">Đây là trang home</h1>
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <!-- <h1 class="h3 mb-0 text-gray-800" style="text-align: center;">User list</h1> -->
+                        <!-- Add account -->
+                        <!-- <button class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-toggle="modal"
+                            data-target="#exampleModal" data-whatever="@getbootstrap"><i
+                                class="fas fa-plus fa-sm text-white-50"></i> Add user</button> -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="exampleModalLabel">User registration</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form id="form" action="">
+                                            <!-- <div class="col-8 col-sm-12" style="text-align: center ;">
+                                                <img src="../assets/image/avatar.jpg" alt="..." class="img-thumbnail"
+                                                    style="height: 200px; width: 200px; border-radius: 50%;">
+                                                <div><input type="file" id="staff_avatar"
+                                                        accept="image/png, image/jpeg">
+                                                </div>
+                                            </div> -->
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="row">
+                                                        <div class="col-8 col-sm-12">
+                                                            <!-- <div class="form-group">
+                                                                        <label for="staff-phone"
+                                                                            class="col-form-label">Email:</label>
+                                                                        <input type="text" class="form-control"
+                                                                            id="staff-phone" />
+                                                                        <div class="fail"></div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="staff-phone"
+                                                                            class="col-form-label">Password:</label>
+                                                                        <input type="text" class="form-control"
+                                                                            id="staff-phone" />
+                                                                        <div class="fail"></div>
+                                                                    </div>
+                                                                    <a style="text-decoration: underline; color: blue; ">Forgot password?</a>
+                                                                    <a style="text-decoration: underline; color: blue; float: right;">User registration</a> -->
+                                                            <!-- <div class="form-group">
+                                                                        <label for="staff-phone"
+                                                                            class="col-form-label">Confirm password:</label>
+                                                                        <input type="text" class="form-control"
+                                                                            id="staff-phone" />
+                                                                        <div class="fail"></div>
+                                                                    </div> -->
+                                                            <!-- <div class="row">
+                                                                <div class="col-8 col-sm-8">
+                                                                    
+                                                                </div>
+                                                                <div class="col-8 col-sm-4">
+                                                                    <div class="col-8 col-sm-12"
+                                                                        style="text-align: center ;">
+                                                                        <img src="../assets/image/avatar.jpg" alt="..."
+                                                                            class="img-thumbnail"
+                                                                            style="height: 200px; width: 200px; border-radius: 50%;">
+                                                                        <div><input type="file" id="staff_avatar"
+                                                                                accept="image/png, image/jpeg">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group col-8 col-sm-8">
+                                                                <label for="staff-name"
+                                                                    class="col-form-label">Giới tính:</label><br>
+                                                                <input type="radio" id="age1" name="age"
+                                                                    value="30">
+                                                                <label for="age1"
+                                                                    style="margin-right: 20%;">Nam</label>
+                                                                <input type="radio" id="age2" name="age"
+                                                                    value="60">
+                                                                <label for="age1"
+                                                                    style="margin-right: 20%;">Nữ</label>
+                                                                <input type="radio" id="age2" name="age"
+                                                                    value="60">
+                                                                <label for="age2">Không xác định</label>
+                                                                <div class="fail"></div>
+                                                            </div> -->
+                                                            <div class="row">
+                                                                <div class="col-8 col-sm-8">
+                                                                    <div class="form-group">
+                                                                        <label for="staff-phone"
+                                                                            class="col-form-label">Full name*:</label>
+                                                                        <input type="text" class="form-control"
+                                                                            id="staff-phone" />
+                                                                        <div class="fail"></div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="staff-phone"
+                                                                            class="col-form-label">Email*:</label>
+                                                                        <input type="text" class="form-control"
+                                                                            id="staff-phone" />
+                                                                        <div class="fail"></div>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="col-8 col-sm-4">
+                                                                    
+                                                                    <div class="form-group">
+                                                                        <label for="staff-name"
+                                                                            class="col-form-label">Gender:</label><br>
+                                                                        <input type="radio" id="age1" name="age"
+                                                                            value="30">
+                                                                        <label for="age1"
+                                                                            style="margin-right: 20%;">Nam</label>
+                                                                        <input type="radio" id="age2" name="age"
+                                                                            value="60">
+                                                                        <label for="age1"
+                                                                            style="margin-right: 20%;">Nữ</label>
+                                                                        <div class="fail"></div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="staff-phone"
+                                                                            class="col-form-label">Mobile:</label>
+                                                                        <input type="text" class="form-control"
+                                                                            id="staff-phone" />
+                                                                        <div class="fail"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- <div class="form-group">
+                                                                <label for="staff-phone"
+                                                                    class="col-form-label">Địa chỉ:</label>
+                                                                <input type="text" class="form-control"
+                                                                    id="staff-phone" />
+                                                                <div class="fail"></div>
+                                                            </div> -->
+                                                            <!-- <div class="row">
+                                                                <div class="col">
+                                                                    <div class="form-group">
+                                                                        <label for="staff-dob"
+                                                                            class="col-form-label">Ngày sinh</label>
+                                                                        <input class="form-control" id="staff-dob"
+                                                                            name="date" placeholder="MM/DD/YYYY"
+                                                                            type="date" />
+                                                                        <div class="fail"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <label for="gender" class="col-form-label">Giới
+                                                                        tính:</label>
+                                                                    <select class="form-control" name="gender"
+                                                                        id="gender">
+                                                                        <option value="male">Nam</option>
+                                                                        <option value="female">Nữ</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div> -->
+                                                        </div>
+                                                        <!-- <div class="col-8 col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="username" class="col-form-label">Tên đăng
+                                                                    nhập:</label>
+                                                                <input type="text" class="form-control" id="username" />
+                                                                <div class="fail"></div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="staff-password" class="col-form-label">Mật
+                                                                    khẩu:</label>
+                                                                <input type="text" class="form-control"
+                                                                    id="staff-password" />
+                                                                <div class="fail"></div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="staff-email"
+                                                                    class="col-form-label">Email:</label>
+                                                                <input type="email" class="form-control"
+                                                                    id="staff-email" />
+                                                                <div class="fail"></div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="staff-roles" class="col-form-label">Vai
+                                                                    trò:</label>
+                                                                <select class="form-control" name="roles" id="roles">
+                                                                    <option value="admin">Admin</option>
+                                                                    <option value="manager">Manager</option>
+                                                                    <option value="business">Business Staff</option>
+                                                                    <option value="customer">Customer</option>
+                                                                </select>
+                                                            </div>
+                                                        </div> -->
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <input type="submit" class="btn btn-primary"
+                                                            value="Register"></input>
+                                                        <!-- <button type="button" class="btn btn-secondary"
+                                                            data-dismiss="modal">Cancel</button> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Page Heading -->
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <!-- <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Danh sách tài khoản</h6>
+                        </div> -->
+                        <!-- <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Mobile</th>
+                                            <th>Role</th>
+                                            <th>Last login</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Nguyễn Trung Kiên</td>
+                                            <td>kienntvn@gmail.com</td>
+                                            <td>0912656836</td>
+                                            <td>Role1</td>
+                                            <td>20/09/2019 18:45</td>
+                                            <td>
+                                                <p id="status_complete">Active</p>
+                                            </td>
+                                            <td><a style="text-decoration: underline; color: blue;">Edit</a>
+                                                <a style="text-decoration: underline; color: blue;">Block</a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Trương Quang Phước</td>
+                                            <td>phuoctqvn@gmail.com</td>
+                                            <td>0912651234</td>
+                                            <td>Role1</td>
+                                            <td></td>
+                                            <td>
+                                                <p id="status_pending">Pending</p>
+                                            </td>
+                                            <td><a style="text-decoration: underline; color: blue;">Edit</a>
+                                                <a style="text-decoration: underline; color: blue;">Approve</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Phạm Quang Minh</td>
+                                            <td>minhpqvn@gmail.com</td>
+                                            <td>0912656836</td>
+                                            <td>Role1</td>
+                                            <td>20/09/2019 18:45</td>
+                                            <td>
+                                                <p id="status_complete">Active</p>
+                                            </td>
+                                            <td><a style="text-decoration: underline; color: blue;">Edit</a>
+                                                <a style="text-decoration: underline; color: blue;">Block</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Nguyễn Quốc Long</td>
+                                            <td>longnqvn@gmail.com</td>
+                                            <td>0912654321</td>
+                                            <td>Role2</td>
+                                            <td>20/09/2019 18:45</td>
+                                            <td>
+                                                <p id="status_reject">Block</p>
+                                            </td>
+                                            <td><a style="text-decoration: underline; color: blue;">Edit</a>
+                                                <a style="text-decoration: underline; color: blue;">Unblock</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>Trần Gia Việt Anh</td>
+                                            <td>anhtgvvn@gmail.com</td>
+                                            <td>0912651342</td>
+                                            <td>Role3</td>
+                                            <td>20/09/2019 18:45</td>
+                                            <td>
+                                                <p id="status_complete">Active</p>
+                                            </td>
+                                            <td><a style="text-decoration: underline; color: blue;">Edit</a>
+                                                <a style="text-decoration: underline; color: blue;">Block</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- End of Main Content -->
+        </div>
+        <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Edit Modal HTML -->
+    <div id="editAccountModal" class="modal fade">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Chi tiết tài khoản</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="form1" action="">
+                        <div class="col-8 col-sm-12" style="text-align: center ;">
+                            <img src="../assets/image/long.png" alt="..." class="img-thumbnail"
+                                style="height: 200px; width: 200px; border-radius: 50%;">
+                            <div><input type="file" id="staff_avatar" accept="image/png, image/jpeg">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="row">
+                                    <div class="col-8 col-sm-6">
+                                        <div class="form-group">
+                                            <label for="staff-code" class="col-form-label">Mã nhân viên:</label>
+                                            <label type="text" class="border border-secondary w-100 rounded label_box"
+                                                readonly class="form-control-plaintext" id="staff-code">AC01</label>
+                                        </div>
+                                        <br>
+                                        <div class="form-group">
+                                            <label for="staff-name" class="col-form-label">Họ và
+                                                tên:</label>
+                                            <input type="text" class="form-control" id="staff-name1"
+                                                value="Phạm Quang Minh" />
+                                            <div class="fail"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="staff-phone" class="col-form-label">Số điện
+                                                thoại:</label>
+                                            <input type="text" class="form-control" value="0916362047"
+                                                id="staff-phone1" />
+                                            <div class="fail"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="staff-address" class="col-form-label">Địa chỉ:
+                                            </label>
+                                            <input type="text" class="form-control"
+                                                value="118 Tây Hồ, Hoàn Kiếm, Hà Nội" id="staff-address1" />
+                                            <div class="fail"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="staff-dob" class="col-form-label">Ngày sinh</label>
+                                                    <input class="form-control" id="staff-dob1" name="date"
+                                                        placeholder="MM/DD/YYYY" value="2000-10-14" type="date" />
+                                                    <div class="fail"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <label for="gender" class="col-form-label">Giới tính:</label>
+                                                <select class="form-control" name="gender" id="gender">
+                                                    <option value="male">Nam</option>
+                                                    <option value="female">Nữ</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-8 col-sm-6">
+                                        <div class="form-group">
+                                            <label for="username" class="col-form-label">Tên đăng
+                                                nhập:</label>
+                                            <input type="text" class="form-control" id="username1"
+                                                value="minhpqdaxua" />
+                                            <div class="fail"></div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="staff-email" class="col-form-label">Email:</label>
+                                            <input type="email" class="form-control" value="minhpq@daxua.com"
+                                                id="staff-email1" />
+                                            <div class="fail"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="staff-password" class="col-form-label">Mật khẩu:</label><br>
+                                            <button type="button" class="btn btn-primary" style="width: 100%;"
+                                                onclick="confirmChangePass()">Gửi mật khẩu mặc định</button>
+                                        </div>
+                                        <br>
+                                        <div class="form-group">
+                                            <label for="staff-roles" class="col-form-label">Vai trò:</label>
+                                            <select class="form-control" name="roles" id="roles">
+                                                <option value="admin">Admin</option>
+                                                <option value="manager">Manager</option>
+                                                <option value="business">Business Staff</option>
+                                                <option value="customer">Customer</option>
+                                            </select>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label for="product-create" class="col-form-label">Ngày
+                                                    tạo:</label>
+                                                <label type="text"
+                                                    class="border border-secondary w-100 rounded label_box"" 
+                                                readonly class=" form-control-plaintext"
+                                                    id="product-create">11/03/2022</label>
+                                            </div>
+                                            <div class="col">
+                                                <label for="product-update" class="col-form-label"
+                                                    style="text-align: right;">Ngày cập nhật:</label>
+                                                <label type="text"
+                                                    class="border border-secondary w-100 rounded label_box" readonly
+                                                    class="form-control-plaintext"
+                                                    id="product-update">15/03/2022</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <input type="submit" class="btn btn-primary" value="Lưu"></input>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+
+    <!-- Custom scripts for all pages-->
+    <script src="../js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="../vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="../vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="../js/demo/datatables-demo.js"></script>
+    <script src="../js/include-html.min.js"></script>
+    <!-- <script src="../js/valdation/confirm.js"></script> -->
+    <script src="../js/valdation/admin_validate.js"></script>
+    <script src="../js/valdation/alert.js"></script>
+    <script src="../js/fnon.min.js"></script>
+    <script src="../js/model_alert.js">
+
+    </script>
+
+</body>
+
+</html>
